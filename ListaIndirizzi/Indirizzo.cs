@@ -24,7 +24,12 @@ namespace ListaIndirizzi
             this.provincia = provincia;
             this.codicePostale = codicePostale;
         }
-
+        public override string ToString()
+        {
+            string rigaCompleta = "-------------------\nIndirizzo di: " + nome + " " + cognome;
+            rigaCompleta += "\n" + via + ", " + citta + ", " + provincia + ", " + codicePostale;
+            rigaCompleta += "\n-------------------";
+            return rigaCompleta;
+        }
     }
-
 }

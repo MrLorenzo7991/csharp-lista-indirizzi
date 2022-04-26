@@ -9,10 +9,10 @@ fileIndirizziCSV.ReadLine();    //forse da controllare
 while (!fileIndirizziCSV.EndOfStream)
 {
     string riga = fileIndirizziCSV.ReadLine();
-    string[] informazioni = riga.Split(',');
+    string[] informazioni = riga.Split(',' , StringSplitOptions.RemoveEmptyEntries);
     try
     {
-        if(informazioni.Length == 6)
+        if(informazioni.Length == 6 )
         {
             string nome = informazioni[0];
             string cognome = informazioni[1];
